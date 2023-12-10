@@ -1,3 +1,5 @@
+package programs
+
 /**
  * You can edit, run, and share this code.
  * play.kotlinlang.org
@@ -9,7 +11,7 @@ fun main() {
     print("Enter Number to check prime or not: ")
     var no = sc.nextInt()
 
-    if(isPrime(no)){
+    if(isPrimee(no)){
         print("No is prime")
     }else {
         print("No is not prime")
@@ -17,7 +19,7 @@ fun main() {
 
 }
 
-fun isPrime(no: Int): Boolean{
+fun isPrimee(no: Int): Boolean{
     if (no == 1)
         return false
     if (no == 2){
