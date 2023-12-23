@@ -51,7 +51,7 @@ public class Programs {
 
     public void printFibo(int no) {
         // 1, 1, 2, 3, 5, 8, 13
-        System.out.print("1, 1");
+        System.out.print("0, 1");
         int i = 1, no1 = 1, no2 = 1, no3;
         while (i < no - 1) {
             no3 = no1 + no2;
