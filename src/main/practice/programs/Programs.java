@@ -52,7 +52,24 @@ public class Programs {
     public void printFibo(int no) {
         // 1, 1, 2, 3, 5, 8, 13
         System.out.print("0, 1");
-        int i = 1, no1 = 1, no2 = 1, no3;
+//        fibonacci(no);
+        fibonacciRecursive(no-3);
+    }
+
+    int no1 = 1, no2 = 1, no3;
+
+    private void fibonacciRecursive(int no) {
+        no3 = no1 + no2;
+        no1 = no2;
+        no2 = no3;
+        System.out.print(", " + no3);
+        if (no > 0) {
+            fibonacciRecursive(no - 1);
+        }
+    }
+
+    private void fibonacci(int no) {
+        int i = 0, no1 = 1, no2 = 1, no3;
         while (i < no - 1) {
             no3 = no1 + no2;
             System.out.print(", " + no3);
