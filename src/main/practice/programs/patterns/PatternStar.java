@@ -117,16 +117,15 @@ public class PatternStar {
          *       *
          * * * * *
          */
-        int no = 5;
-        for (int i = 1; i < no; i++) {
-            for (int j = 1; j <= no; j++) {
-                if (i == 1 || i == no - 1 || j == 5 || j == 1)
+        int noRows = 4, noCols=5;
+        for (int i = 1; i <= noRows; i++) {
+            for (int j = 1; j <= noCols; j++) {
+                if (i == 1 || i == noRows || j == 1 || j == noCols)
                     System.out.print("*");
                 else
                     System.out.print(" ");
             }
             System.out.println();
         }
-
     }
 }
