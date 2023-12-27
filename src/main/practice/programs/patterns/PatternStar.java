@@ -226,6 +226,8 @@ public class PatternStar {
 
             System.out.println();
         }
+        System.out.println();
+        System.out.println();
 
         // Butterfly pattern
         /*
@@ -234,12 +236,67 @@ public class PatternStar {
          **    **
          ***  ***
          ********
+         */
+        no = 8;
+        for (int i = 1; i <= no/2; i++) {
+            for (int j = 1; j <= no; j++) {
+                if (j<=i || j>no-i){
+                    System.out.print("*");
+                }else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        /*
+        ********
+        ***  ***
+        **    **
+        *      *
+        */
+        for (int i = no / 2; i >= 1; i--) {
+            for (int j = 1; j <= no; j++) {
+                if (j <= i || j > no - i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println();
+
+        /*
+         *      *
+         **    **
+         ***  ***
+         ********
          ********
          ***  ***
          **    **
          *      *
-
-         */
+        * */
+        for (int i = 1; i <= no; i++) {
+            for (int j = 1; j <= no; j++) {
+                if (i <= no / 2) {
+                    if (j <= i || j > no - i) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                } else {
+                    if (j <= no - i + 1 || j > i-1) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println();
 
 
         // Solid rhombus pattern
@@ -251,7 +308,20 @@ public class PatternStar {
          *****
 
          */
+        no = 10;
+        for (int i = no / 2; i >= 1; i--) {
+            for (int j = 1; j <= no; j++) {
+//                if (j > i && j <= no - ((no / 2) - i))
+                if (j > i && j <= (no / 2) + i)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
 
+        System.out.println();
+        System.out.println();
 
         // Hollow rhombus pattern
         /*
@@ -263,7 +333,26 @@ public class PatternStar {
          *****
 
          */
+        for (int i = no / 2; i >= 1; i--) {
+            for (int j = 1; j <= no; j++) {
+                if (j > i && j <= (no / 2) + i) {
+                    if (i == 1 || i == no / 2 || (i + 1) == j || i + (no / 2) == j)
+                        System.out.print("*");
+                    else
+                        System.out.print(" ");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
 
+//5,6   4,5   3,4 s
+//5,7   4,6   3,5 ds
+//5,10  4,9   3,8 s
+
+        System.out.println();
+        System.out.println();
         // Diamond pattern
 
         /*
@@ -277,7 +366,29 @@ public class PatternStar {
            *
 
          * */
+        no=8;
+        for (int i = 1; i <= no/2; i++) {
+            for (int j = 1; j <= no; j++) {
+                if (j > (no / 2) - i && j < (no / 2) + i)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
 
+        for (int i = 1; i <=no/2; i++) {
+            for (int j = 1; j <= no; j++) {
+                if (j>=i && j<= no-i)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println();
 
         //Number pyramid pattern
 
@@ -289,7 +400,18 @@ public class PatternStar {
         5 5 5 5 5
 
         * */
+        no = 10;
+        for (int i = 1; i <= no / 2; i++) {
 
+            for (int k = 1; k <= no - (i + no / 2); k++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i + " ");
+            }
+
+            System.out.println();
+        }
 
 
         // Palindromic pattern
